@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ejemplos de jQueryUI</title>
+    <script src="jquery-3.1.1.js"></script>
+    <script src="jquery-ui/jquery-ui.js"></script>
+    <style>
+        .caja{
+            width: 40px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>ejemplos de jQueryUI</h1>
+    <h2>ejemplos de acordeon</h2>
+    <div id="acordeon">
+
+        <h3>encabezado 1</h3>
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Impedit minus ullam natus eos accusantium iusto, mollitia labore inventore odio itaque similique ut iure. 
+            Iure, saepe dignissimos. Velit voluptate, aut ab.</p>
+        </div>
+
+        <h3>encabezado 2</h3>
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Impedit minus ullam natus eos accusantium iusto, mollitia labore inventore odio itaque similique ut iure. 
+            Iure, saepe dignissimos. Velit voluptate, aut ab.</p>
+        </div>
+
+        <h3>encabezado 3</h3>
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Impedit minus ullam natus eos accusantium iusto, mollitia labore inventore odio itaque similique ut iure. 
+            Iure, saepe dignissimos. Velit voluptate, aut ab.</p>
+        </div>
+
+    </div>
+    <h2>ejemplo de pestañas</h2>
+    <div id="pestañas">
+        <ul>
+            <li><a href="#contenido1">pestaña 1</a></li>
+            <li><a href="#contenido2">pestaña 2</a></li>
+            <li><a href="#contenido3">pestaña 3</a></li>
+        </ul>
+
+        <div id="contenido1">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                Quidem cupiditate consectetur omnis labore. 
+                Harum libero recusandae quas non veniam excepturi, animi?
+            </p>
+        </div>
+
+        <div id="contenido2">
+            <p>
+               Dolor quia placeat nulla, omnis voluptas amet veniam numquam? 
+               Quidem cupiditate consectetur omnis labore. Harum libero recusandae quas non veniam excepturi, animi?
+            </p>
+        </div>
+
+        <div id="contenido3">
+            <p>
+               voluptas amet veniam numquam? Quidem cupiditate consectetur omnis labore. 
+               Harum libero recusandae quas non veniam excepturi, animi?
+            </p>
+        </div>
+
+    </div>  
+    <h3>ejemplo arrastable</h3>
+    
+    <div class="caja" id="limite">
+        <span id="arrastrable">arrastrame</p>
+        </div> 
+    
+    <script>
+        $(function(){
+            $('#acordeon').accordion()
+            $('#pestañas').tabs()
+            $('#arrastrable').draggable({
+                
+            })
+        })
+    </script>
+</body>
+</html>
