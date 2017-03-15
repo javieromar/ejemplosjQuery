@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <script src="jquery-3.1.1.js"></script>
+    <title>efectos jQuery</title>
+    <style>
+        .caja{
+            background-color: green;
+            width: 640px;
+            height: 480px;
+        }
+        .pelota{
+            background-color: orange;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplos de efectos en jQuery</h1>
+    <h2>ocultar y mostrar</h2>
+    <button id="btn-ocultar">ocultar</button>
+    <button id="btn-mostrar">mostrar</button>
+    <button id="btn-alernar">alternar</button>
+    <h2>fundido</h2>
+    <button id="btn-desapardecer">desapardecer</button>
+    <button id="btn-aparecer">aparecer</button>
+    <button id="btn-alernar-fun">alternar</button>
+    <button id="btn-fadeto">difuminar</button>
+    <h2>desplazamiento</h2>
+    <button id="btn-arriba">desapardecer</button>
+    <button id="btn-abajo">aparecer</button>
+    <button id="btn-des-alernar">alternar</button>
+
+    <p id="parrafo1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae leo augue. 
+        Fusce sodales leo sit amet orci ultricies, ut pharetra felis viverra. Mauris vitae consectetur felis. 
+        Nunc accumsan tellus nec euismod condimentum. Pellentesque sed enim metus. Praesent commodo diam eu nisl aliquet semper. 
+        Etiam nec ipsum at nibh blandit tempus. 
+        Quisque vitae dolor congue, facilisis ipsum ac, pellentesque neque. Nullam vehicula vel sem quis congue. Nulla facilisi.
+    </p>
+    <h2>Animaciones</h2>
+    <div class="caja">
+        <div class="pelota">
+
+        </div>
+
+    </div>
+    <script >
+        $(function(){
+            //animaciones
+            $('.pelota').click(function(){
+                $(this).animate({
+                    width: '300px'
+                    height:'300px'
+                })
+            })
+            //mostrar y ocultar
+            $('#btn-ocultar').click(function(){
+                $('#parrafo1').hide();
+            })
+            $('#btn-mostrar').click(function(){
+                $('#parrafo1').show();
+            })
+            $('#btn-alernar').click(function(){
+                $('#parrafo1').toggle();
+            })
+            //aparecer y desapardecer
+            $('#btn-desapardecer').click(function(){
+                $('#parrafo1').fadeOut('slow');
+            })
+            $('#btn-aparecer').click(function(){
+                $('#parrafo1').fadeIn('slow');
+            })
+            $('#btn-alernar-fun').click(function(){
+                $('#parrafo1').fadeToggle('slow');
+            })
+            $('#btn-fadeto').click(function(){
+                $('#parrafo1').fadeTo('slow',0.5);
+            })
+            //deslisar
+            $('#btn-arriba').click(function(){
+                $('#parrafo1').sideUp('slow');
+            })
+            $('#btn-abajo').click(function(){
+                $('#parrafo1').sidedown('slow');
+            })
+            $('#btn-des-alernar').click(function(){
+                $('#parrafo1').sideToggle('slow');
+            })
+
+        })
+    </script>
+    
+</body>
+</html>

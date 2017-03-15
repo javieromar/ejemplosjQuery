@@ -6,3 +6,11 @@ $(function(){
 $(function(){
     $nuevo=$('<p>Parrafo nuevo</p>')$('h2').after($nuevo))
 })
+
+$('h2').after($nuevo)
+
+/*$('#boton1').click(function (e)
+{
+    e.
+}
+*/
